@@ -1,20 +1,24 @@
 import * as React from 'react';
-import './App.css';
+import styled from 'styled-components';
+import Header from './components/Header'
+import Navigation from './components/Navigation'
 
-import logo from './logo.svg';
-
+const AppContainer = styled.div`
+  text-align: center;
+`
+const AppIntro = styled.p`
+  font-size: large;
+`
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <AppContainer>
+        <Header />
+        <Navigation />
+        <AppIntro>
+          <code>> process.stdin = 'Ok, That's do it.'</code>
+        </AppIntro>
+      </AppContainer>
     );
   }
 }
